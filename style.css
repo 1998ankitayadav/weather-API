@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #9face6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: 0.4s;
+  overflow-x: hidden;
+}
+
+/* DARK MODE */
+.dark {
+  background: #0f0f0f;
+  color: white;
+}
+
+/* WEATHER THEMES */
+.sunny {
+  background: linear-gradient(135deg, #f6d365, #fda085);
+}
+
+.rainy {
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+}
+
+.cloudy {
+  background: linear-gradient(135deg, #bdc3c7, #2c3e50);
+}
+
+.snow {
+  background: linear-gradient(135deg, #e6dada, #274046);
+}
+
+/* APP */
+.app {
+  width: 95%;
+  max-width: 420px;
+  text-align: center;
+  padding: 10px;
+}
+
+/* TOP BAR FIX */
+.top-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 10px 0;
+}
+
+.top-bar h1 {
+  font-size: 20px;
+  margin: 0;
+  font-weight: bold;
+}
+
+#themeToggle {
+  position: absolute;
+  right: 10px;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background: rgba(255,255,255,0.3);
+}
+
+/* SEARCH FIX (MAIN ISSUE SOLVED) */
+.search {
+  display: flex;
+  gap: 8px;
+  margin: 15px 0;
+  align-items: center;
+}
+
+.search input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.search button {
+  flex: 0 0 auto;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* RECENT */
+.recent button {
+  margin: 3px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  border: none;
+  background: rgba(255,255,255,0.3);
+}
+
+/* WEATHER CARD */
+.card {
+  background: rgba(255,255,255,0.15);
+  padding: 15px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* TEXT */
+.main-info p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.extra p {
+  font-size: 13px;
+  margin: 3px 0;
+  opacity: 0.9;
+}
+
+/* FORECAST */
+.forecast {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 5px;
+}
+
+.forecast div {
+  min-width: 80px;
+  background: rgba(255,255,255,0.2);
+  padding: 8px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+/* LOADER */
+.hidden {
+  display: none;
+}
+
+/* ERROR */
+.error {
+  color: red;
+  margin: 5px 0;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 480px) {
+  .search {
+    flex-direction: column;
+  }
+
+  .search input,
+  .search button {
+    width: 100%;
+  }
+
+  .app {
+    padding: 15px;
+  }
+}

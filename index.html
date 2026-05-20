@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Pro App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <h1>🌤️ Weather Pro</h1>
+    <button id="themeToggle">🌙</button>
+  </div>
+
+  <!-- SEARCH -->
+  <div class="search">
+    <input type="text" id="cityInput" placeholder="Enter city..." />
+    <button id="searchBtn">Search</button>
+    <button id="locationBtn">📍</button>
+  </div>
+
+  <!-- RECENT -->
+  <div id="recent" class="recent"></div>
+
+  <!-- LOADER + ERROR -->
+  <div id="loader" class="hidden">Loading...</div>
+  <div id="error" class="error"></div>
+
+  <!-- WEATHER CARD -->
+  <div class="card hidden" id="weatherCard">
+
+    <img id="icon" />
+
+    <h2 id="cityName"></h2>
+
+    <div class="main-info">
+      <p id="temp"></p>
+      <p id="condition"></p>
+    </div>
+
+    <div class="extra">
+      <p id="feelsLike"></p>
+      <p id="humidity"></p>
+      <p id="wind"></p>
+      <p id="sunrise"></p>
+      <p id="sunset"></p>
+    </div>
+
+  </div>
+
+  <!-- HOURLY -->
+  <h3>Hourly Forecast</h3>
+  <div id="hourly" class="forecast"></div>
+
+  <!-- DAILY -->
+  <h3>5 Day Forecast</h3>
+  <div id="forecast" class="forecast"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
